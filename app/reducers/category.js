@@ -1,6 +1,6 @@
 /**
  *
- *
+ * Copyright 2016-present reading
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,23 +15,25 @@
  * limitations under the License.
  *
  */
-import React from 'react';
-import { Provider } from 'react-redux';
-// import configureStore from './store/configure-store';
-import App from './containers/app';
-// import { createStore } from 'redux';
-// const store = createStore(fn);
+import * as types from '../constants/ActionTypes';
 
+const initialState = {
+  loading: false,
+  typeList: {}
+};
 
-// // run root saga
-// store.runSaga(rootSaga);
-
-class Root extends React.Component{
-  render(){
-    return(
-      <App>sad</App>
-    )
+export default function category(state = initialState, action) {
+  switch (action.type) {
+    case types.FETCH_TYPE_LIST:
+      return Object.assign({}, state, {
+        loading: true
+      });
+    case types.RECEIVE_TYPE_LIST:
+      return Object.assign({}, state, {
+        loading: false,
+        typeList: action.typeList
+      });
+    default:
+      return state;
   }
 }
-
-export default Root;
