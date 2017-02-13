@@ -1,0 +1,27 @@
+.my-list .spe .am-list-extra {
+  flex-basis: initial;
+}
+.mgt30 {
+    margin-top: 0.2rem;
+}
+.flex1 {
+    flex:1;
+    backgroundColor: '#ebebef';
+    color: '#bbb';
+    textAlign: 'center';
+    height: '1.6rem';
+    lineHeight: '1.6rem';
+    width: '100%';
+}
+.flex5 {
+    flex:5;
+    backgroundColor: '#ebebef';
+    color: '#bbb';
+    textAlign: 'center';
+    height: '1.6rem';
+    lineHeight: '1.6rem';
+    width: '100%';
+}
+.high2 {
+    height: '2rem';
+}
